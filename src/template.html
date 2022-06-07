@@ -1,1 +1,63 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do List</title>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="content">
+            <div id="header"> 
+                Some header Stuff
+                <div class="greet">Greet User</div>
+                <div class="tools">Tools (Search Bar)</div>
+                <div class="settings">Settings</div>
+            </div>
+            <div id="sidebar">
+                <div class="sidebar-top">
+                    Profile + create task
+                    <div class="profile"> Profile info</div>
+                    <div class="create-task">Create Task</div>
+                </div>
+                <div class="navbar"> 
+                    navbar 
+                    <div class="overview">Overview</div>
+                    <div class="time-range">Time Ranges</div>
+                    <div class="categories">Categories</div>
+                </div>
+            </div>
+
+            <div id="main">
+                <span class="tag"> </span>
+                <span class="tag"> Main stuffs </span>
+
+                <div class="tasks-container">
+                    task container
+                    <div class="taskItem-container">
+                         <span class="tag">task item template</span>
+
+                         
+                         <div class="eventBooster"></div>
+                         <button>Check</button>
+                         <div class="taskItem-content">Task Item Content
+                             <div class="title"></div>
+                             <div class="date"></div>
+                         </div>
+                         <div class="taskItem-tools">Edit and delete</div>
+                    </div>
+
+                    <div class="create-task">
+                        <input type="text" name="taskTitle" id="taskTitle" placeholder="Quickly create a task">
+                        <button>Submit</button>
+                    </div>
+                </div>
+
+                <div class="info-container">
+                    Display Info or Calendar
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
