@@ -2,7 +2,6 @@ import createHtmlElement from "./HtmlElements.js";
 import { getItem } from "./HtmlElements";
 
 
-
 // function createTask() {
 //     const _getTaskInfo = () => {
 
@@ -36,16 +35,36 @@ function taskElement () {
     const $taskContent = createHtmlElement("div", null, ["taskItem-content"], null);
      const $tasktitle = createHtmlElement("div", null, ["title"], "Title"); 
      const $taskdate = createHtmlElement("div", null, ["date"], "Date"); 
-    const $tasktools = createHtmlElement("div", null, ["taskItem-tools"], "Edit and Del");
+    const $tasktools = createHtmlElement("div", null, ["taskItem-tools"], "Edit & Del");
 
     $taskContent.append($tasktitle, $taskdate);
     $taskItem.append($eventBooster, $button, $taskContent, $tasktools);
 
-    console.log(`Inside Task.js`);
-    console.log($taskItem);
+    console.log(`Inside taskElement Task.js`);
 
     return ($taskItem);
 }
 
+const getTaskInfo = (()=>{
+    getItem.$createTask.forEach((element) => 
+        element.addEventListener("click", (e) => {
+            const parentElement = e.target.parentElement; 
+            const taskTitle = parentElement.querySelector("input").value;
+
+
+
+
+            console.log(parentElement);
+            console.log(taskTitle);
+            console.log("create")
+        })
+    );   
+
+    console.log("Inside getTaskInfo Task.js");
+})();
+
+     
+
 
 export default taskElement;
+export {getTaskInfo}

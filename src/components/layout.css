@@ -43,6 +43,7 @@ html,body{
     position: relative;
     display: flex;
     flex-flow: column;
+    gap: 6px;
 }
 
 .taskItem-container{
@@ -52,6 +53,25 @@ html,body{
     padding-top: 30px;
 }
 
+.eventBooster{
+
+}
+.taskItem-content{
+    flex: 1;
+}
+
+.taskItem-content > .title {
+
+}
+
+.taskItem-content > .date {
+
+}
+
+.taskItem-tools {
+}
+
+
 .tasks-container > .create-task{
     box-sizing: border-box;
     position: absolute;
@@ -59,7 +79,6 @@ html,body{
     width: 100%;
     padding: 8px;
 }
-
 
 .tag {
     position: absolute;

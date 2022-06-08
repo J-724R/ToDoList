@@ -7,13 +7,13 @@ const getItem = (()=> {
     $sidebar = d.querySelector('div#sidebar'),
      $sidebarTop =d.querySelector('div[class=sidebar-top]'),
       $profile = d.querySelector('div.profile'),
-      $createTask = d.querySelector('div[class=create-task]'),
+      $createTask = d.querySelectorAll('div[class=create-task]>button'),
      $navbar = d.querySelector('div.navbar'),
       $overview = d.querySelector('div.overview'),
       $timeRange = d.querySelector('div[clas=time-range]'),
       $categories = d.querySelector('div.categories'),   
     $main = d.querySelector('div#main'),
-      $tasksContainer = d.querySelector('div[class=tasks-container]'), 
+      $tasksContainer = d.querySelector('div[class=tasks-container]'),
       $infoContainer = d.querySelector('div[class=taskItem-container]');
 
   return { d, $header, $greet, $tools, $settigns, $sidebar, 

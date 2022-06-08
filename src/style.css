@@ -1,3 +1,7 @@
 *{
     outline: 1px solid red;
 }
+
+.taskItem-content > .date {
+    color: rgba(125, 125, 125, 0.801);
+}
