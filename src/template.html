@@ -17,15 +17,20 @@
                 <div class="sidebar-top">
                     Profile + create task
                     <div class="profile"> Profile info</div>
-                    <div class="create-task">Create Task
-                        <button>Submit</button>
+                    <div class="create-task">
+                        <button id="btn-create">Create task</button>
                     </div>
                 </div>
                 <div class="navbar"> 
                     navbar 
                     <div class="overview">Overview</div>
-                    <div class="time-range">Time Ranges</div>
-                    <div class="categories">Categories</div>
+                    <div class="due-dates">
+                        Due dates
+                        <div class="time-range options">Today</div>
+                        <div class="time-range options">Next 7 Days</div>
+                        <div class="time-range options">Next 15 Days</div>
+                    </div>
+                    <div class="categories">Topics</div>
                 </div>
             </div>
 
@@ -41,22 +46,19 @@
                          
                          <div class="eventBooster"></div>
                          <button>Check</button>
-                         <div class="taskItem-content">Task Item Content
-                             <div class="title"></div>
-                             <div class="date"></div>
+                         <div class="taskItem-content">
+                             <div class="title"> Pasear a Ryuk </div>
+                             <div class="date"> Todos los dias </div>
                          </div>
                          <div class="taskItem-tools">Edit and delete</div>
                     </div>
 
                     <div class="create-task">
-                        <input type="text" name="taskTitle" id="taskTitle" placeholder="Quickly create a task">
-                        <button>Submit</button>
+                        <input type="text" name="title" id="title" placeholder="Quickly create a task">
+                        <button id="btn-submit">Submit</button>
                     </div>
                 </div>
 
-                <div class="info-container">
-                    Display Info or Calendar
-                </div>
             </div>
         </div>
 
