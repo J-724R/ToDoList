@@ -4,6 +4,7 @@ html,body{
 }
 
 #content{
+    position: relative;
     display: grid;
     grid-template-columns: 3fr 8fr;
     grid-template-rows: 1fr 10fr;
@@ -86,4 +87,58 @@ html,body{
     left: 0;
     background-color:rgb(255, 223, 191);
 }
+
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(55, 55, 55, 0.166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 8px;
+    width: 600px;
+    height: 380px;
+}
+
+.form-container>form{
+    display: flex;
+    flex: 1;
+    gap: 5px;
+    padding: 8px;
+}
+
+.form-mainInfo,
+.form-extraInfo{
+    flex: 1;
+}
+
+.form-extraInfo{
+    max-width: 30%;
+}
+
+.form-mainInfo{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.form-option{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.btn-addTask{
+}
+
+
+
 

@@ -67,7 +67,6 @@ const getTaskInfo = (()=>{
     );
 })();
 
-
 function createTaskElement (task) {
     const $taskItem = createHtmlElement("div", task.id, ["taskItem-container"], null);
     const $eventBooster = createHtmlElement("div", null, ["eventBooster"], null);
@@ -77,13 +76,16 @@ function createTaskElement (task) {
      const $taskdate = createHtmlElement("div", null, ["date"], task.date); 
     const $tasktools = createHtmlElement("div", null, ["taskItem-tools"], "Edit & Del");
 
+    // $taskItem.dateset.status = ;
+    // $taskItem.dateset.tag = ;
+    // $taskItem.dateset.topic = ;
+    // $taskItem.dateset.project = ;
 
     $tasktools.addEventListener("click", (e) => { e.target.parentElement.remove()})
     $taskContent.append($tasktitle, $taskdate);
     $taskItem.append($eventBooster, $button, $taskContent, $tasktools);
 
     console.log(`Inside taskElement Task.js`);
-
     return ($taskItem);
 }
 

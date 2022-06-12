@@ -37,19 +37,40 @@ function createHtmlElement(type, id, classesArray, content) {
 
 function renderForm() {
   const $form = document.createRange().createContextualFragment(`
-        <form action="">
-          <div class="form-options">
-              <label for="title" class="">Title</label>
-              <input type="text" name="title" id="title"></div>
-          <div class="form-options">
-              <label for="details" class="">Details</label>
-              <input type="text" name="details" id="details"></div>
-          <div class="form-options">
-              <label for="date" class=""></label>
-              <input type="text" name="date" id="date" placeholder="Due date">
-          </div>     
-        </form>
-        <button id="btn-submit">Submit</button>          
+        <div class="mask">
+            <div class="form-container">
+                <form action="" >
+                    <div class="form-mainInfo">
+                        <div class="form-option title">
+                            <label for="title">Titles</label>
+                            <input type="text" name="title" id="title" placeholder="New task">
+                        </div>
+                        <div class="form-option date">
+                            <label for="date">Set Time</label>
+                            <input type="date" name="date" id="date">
+                        </div>
+                        <div class="form-option">
+                            <label for="notes">Details</label>
+                            <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Write some notes"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-extraInfo">
+                        <div class="form-option">
+                            <div class="label">User info</div>
+                        </div>
+                        <div class="form-option">
+                            <div class="label">Topic</div>
+                            <button class="form-sidebtn">Personal</button>
+                        </div>
+                        <div class="form-option">
+                            <div class="label">Tag</div>
+                            <button class="form-sidebtn">tags</button>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn-addTask">Add Task</button>
+            </div>
+        </div>       
   `);
 
   return $form;
