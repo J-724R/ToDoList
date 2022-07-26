@@ -7,9 +7,9 @@ import { remove } from "lodash";
 //     add get form info 
 //     add reset values
 
-const Task = (title, details, date, status, tag, topic, project, id) => ({
+const Task = (title, notes, date, status, tag, topic, project, id) => ({
     title,
-    details,
+    notes,
     date, 
     status,
     tag,
@@ -19,8 +19,8 @@ const Task = (title, details, date, status, tag, topic, project, id) => ({
 });
 
 function checkExistence (element) {
-    return (!element) ? element : "" ;
-};
+    return (element) ? element : " " ;
+}
 
 function idcounter() {
     let defaultId = 0;
@@ -37,40 +37,29 @@ function idcounter() {
     };
     
     return id;
-};
+}
 
-const getTaskInfo = (()=>{
-    getItem.$btnSubmit.forEach((element) => 
-     element.addEventListener("click", (e) => {
+function getTaskInfo(e){
+    const Scope = e.target.parentElement;
 
-        const Scope = e.target.parentElement 
-        
-        let title = Scope.querySelector(`input#title`).value;
-        let details = checkExistence(Scope.querySelector(`input#title`).value);
-        let date = checkExistence(Scope.querySelector(`input#title`).value);
-        let status = "pending";
-        let tag = checkExistence(Scope.querySelector(`input#title`).value);
-        let project = checkExistence(Scope.querySelector(`input#title`).value);
-        let topic = checkExistence(Scope.querySelector(`input#title`).value);
-        let id = idcounter();
+    let title = Scope.querySelector(`input#title`).value;
+    let notes = checkExistence(Scope.querySelector(`textarea[id=notes]`)).value;
+    let date = checkExistence(Scope.querySelector(`input#dates`)).value;
+    let status = "pending";
+    let tag = checkExistence(Scope.querySelector(`input#tag`)).value;
+    let project = checkExistence(Scope.querySelector(`input#topic`)).value;
+    let topic = checkExistence(Scope.querySelector(`input#title`)).value;
+    let id = idcounter();
 
-        console.log(id);
-        let newTask = Task(title, details, date, status, tag, project, topic, id);
-        
-        localStorage.setItem(`task${id}`, JSON.stringify(newTask));
-
-
-        console.log(newTask);
-        getItem.$tasksContainer.append(createTaskElement(newTask))
-
-        })
-    );
-})();
+    let newTask = Task(title, notes, date, status, tag, project, topic, id);
+    localStorage.setItem(`task${id}`, JSON.stringify(newTask));
+    console.log(newTask);
+}
 
 function createTaskElement (task) {
     const $taskItem = createHtmlElement("div", task.id, ["taskItem-container"], null);
     const $eventBooster = createHtmlElement("div", null, ["eventBooster"], null);
-    const $button = createHtmlElement("button", null, null , "check");
+    const $button = createHtmlElement("button", "task-status", null , "check");
     const $taskContent = createHtmlElement("div", null, ["taskItem-content"], null);
      const $tasktitle = createHtmlElement("div", null, ["title"], task.title); 
      const $taskdate = createHtmlElement("div", null, ["date"], task.date); 

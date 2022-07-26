@@ -28,8 +28,8 @@ function createHtmlElement(type, id, classesArray, content) {
   const element = document.createElement(type);
   if (id) element.id = id;
   if (classesArray){
-    classesArray.forEach((sgclass) => element.classList.add(sgclass));
-  };
+    classesArray.forEach((className) => element.classList.add(className));
+  }
   if (content) element.innerText = content;
 
   return element;
@@ -39,11 +39,11 @@ function renderForm() {
   const $form = document.createRange().createContextualFragment(`
         <div class="mask">
             <div class="form-container">
-                <form action="" >
+                <form action="" id="mainForm">
                     <div class="form-mainInfo">
                         <div class="form-option title">
-                            <label for="title">Titles</label>
-                            <input type="text" name="title" id="title" placeholder="New task">
+                            <label for="title">Task TIttle *</label>
+                            <input type="text" name="title" id="title" placeholder="What I want to do">
                         </div>
                         <div class="form-option date">
                             <label for="date">Set Time</label>
@@ -51,7 +51,7 @@ function renderForm() {
                         </div>
                         <div class="form-option">
                             <label for="notes">Details</label>
-                            <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Write some notes"></textarea>
+                            <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Write some notes" wrap="hard"></textarea>
                         </div>
                     </div>
                     <div class="form-extraInfo">
@@ -68,11 +68,10 @@ function renderForm() {
                         </div>
                     </div>
                 </form>
-                <button class="btn-addTask">Add Task</button>
+                <button class="btn-addTask" form="mainForm">Add Task</button>
             </div>
         </div>       
   `);
-
   return $form;
 }
 

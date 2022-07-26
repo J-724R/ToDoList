@@ -40,6 +40,12 @@ html,body{
     gap: 15px;
 }
 
+.navbar{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
 .tasks-container{
     position: relative;
     display: flex;
@@ -69,7 +75,12 @@ html,body{
 
 }
 
+.task-status{
+
+}
+
 .taskItem-tools {
+    cursor: pointer;
 }
 
 
@@ -139,6 +150,10 @@ html,body{
 .btn-addTask{
 }
 
+
+textarea{
+    max-width: 100%;
+}
 
 
 

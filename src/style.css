@@ -5,3 +5,38 @@
 .taskItem-content > .date {
     color: rgba(125, 125, 125, 0.801);
 }
+
+.navbar{
+    color: rgb(95, 95, 95);
+}
+
+.navbar_item:hover{
+    color: black;
+    font-weight: 525;
+    cursor: pointer;
+}
+
+.navbar_item.selected{  
+    color: black;
+    font-weight: 525;
+}
+
+.navbar_item.selected  .dropdown_container{
+    height: auto;
+    color: rgb(95, 95, 95);
+    visibility: visible;
+}
+
+.dropdown_container{
+    visibility: hidden;
+    height: 0px;
+    transition: transform 300ms ease-in-out;
+}
+
+
+
+
+
+.dropdown-items{
+    
+}
